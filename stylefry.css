@@ -21,7 +21,7 @@ a{
 
 .heading{
     overflow: hidden;
-    position: fixed;
+    position: static;
     top: 0;
     width: 100%;
     
@@ -34,10 +34,11 @@ a{
     text-align: center;
     padding:14px 16px;
     font-size: 18px;
+    background-color: #20242b
 }
 .heading a:hover {
     background-color: rgb(194, 191, 150);
-    color: 20242b;
+    color: #20242b;
 }
 .footer {
     position: fixed;
