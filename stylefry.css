@@ -21,7 +21,7 @@ a{
 
 .heading{
     overflow: hidden;
-    position: static;
+    position: fixed;
     top: 0;
     width: 100%;
     
