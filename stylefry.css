@@ -44,3 +44,17 @@ a{
      width: 100%;
     text-align: center;
 } 
+
+.large {
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.small {
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+}
+
