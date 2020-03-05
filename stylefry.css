@@ -2,12 +2,12 @@ html{
     height: 100%;
 }
 body{
-
+    
     background-image: linear-gradient(45deg, #20242b 0%, #8895ac 100%);
     background-attachment:fixed;
     height:100%;
-
-
+  
+    
 }
 p{
     font-family: 'Franklin Gothic Medium';
@@ -24,7 +24,7 @@ a{
     position: fixed;
     top: 0;
     width: 100%;
-
+    
 }
 
 .heading a{
@@ -43,4 +43,22 @@ a{
     bottom: 0;
      width: 100%;
     text-align: center;
-} 
+}
+
+
+
+
+.large {
+  color: #fff;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.small {
+  width: 900px;
+  display: flex;
+  justify-content: space-around;
+}
+
+
