@@ -1,5 +1,4 @@
-<html>
-<head>
+<Head>
     <title>
 
         Artisan Fries Contact Page
@@ -9,12 +8,12 @@
     <link rel="stylesheet" href="stylefry.css">
 
     <!--interal stylesheet-->
-    <style>
-        * {
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-        }
+    <Style>
+       * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
         h1 {
             color:rgb(255, 238, 190);
             text-align: center;
@@ -31,6 +30,10 @@
             text-align: center;
             /*text-shadow: 2px 2px 4px #2F2821;*/
         }
+        h5 {
+            color:rgb(255, 238, 190);
+            text-align: center;
+        }
         
         sub {
             color:rgb(255, 238, 190);
@@ -43,26 +46,9 @@
             position: fixed;
         }
         
-    </style>
-</head>
-<body>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" 
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
-    crossorigin="anonymous"></script>
-    <script language="javascript">
-        $(function(){
-            $('body').hide();
-            $('body').fadeIn(3000);
-
-            $('a').click(function(){
-                link = $(this).attr('href');
-                $('body').fadeOut(1000, function(){
-                    window.location.href = link;
-                });
-                return false;
-            });
-        });
-    </script>
+    </Style>
+</Head>
+<Body>
     <h1>
        <br>CONTACT
     </h1>
@@ -93,7 +79,7 @@
             <div><h3>Sudbury, MA, 01244</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Phone</h2></div>
-            <br><br>
+            <h5>(24/7)</h5><br><br>
             <div><h3>617-932-3813</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Email</h2></div>
@@ -110,7 +96,7 @@
             <div><h3>Boston, MA, 31294</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Phone</h2></div>
-            <br><br>
+            <h5>(24/7)</h5><br><br>
             <div><h3>617-939-4134</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Email</h2></div>
@@ -127,7 +113,7 @@
             <div><h3>Sudbury, MA, 01244</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Phone</h2></div>
-            <br><br>
+            <h5>(24/7)</h5><br><br>
             <div><h3>617-102-2245</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Email</h2></div>
@@ -144,7 +130,7 @@
             <div><h3>Sudbury, MA, 01244</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Phone</h2></div>
-            <br><br>
+            <h5>(24/7)</h5><br><br>
             <div><h3>617-245-3316</h3></div>
             <br><br>
             <div><h2  style="text-decoration: underline;">Email</h2></div>
@@ -162,5 +148,5 @@
         <p>Contact us: <a href="mailto:fakeaddress@gmail.com">
        Frymyfaceoff@fakeaddress.com</a>.</p>
         </div>
-</body>
+</Body>
 </html>
