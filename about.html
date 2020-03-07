@@ -6,6 +6,7 @@
 
     <!-- external stylesheet-->
     <link rel="stylesheet" href="stylefry.css">
+    <link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
 
     <!--interal stylesheet-->
     <Style>
@@ -15,25 +16,136 @@
             text-align: center;
             text-shadow: 2px 2px 4px #2F2821;
         }
+        .row {
+            width: 100%;
+            box-sizing: border-box;
+            display: inline-block;
+        }
+        .profile {
+            width: 50%;
+            box-sizing: border-box;
+            display: inline-block;
+            float: left;
+            padding-left: 120px;
+        }
+        .column {
+            width: 50%;
+            box-sizing: border-box;
+            display: inline-block;
+            float: right;
+            padding-top: 60px;
+        }
+        .name {
+            text-align: center;
+            font-size: 30px;
+            color: ;
+            font-family: Cairo,serif;
+        }
+        .personal {
+            text-align: center;
+            font-size: 26px;
+            font-family: Cairo,serif;
+        }
+        .fact {
+            text-align: center;
+            font-style: italic;
+            font-size: 26px;
+            font-family: Cairo,serif;
+        }
+        div.personal, div.fact {
+            line-height: 30px;
+        }
         
         
     </Style>
 </Head>
 <Body>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" 
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
+    crossorigin="anonymous"></script>
+    <script language="javascript">
+        $(function(){
+            $('body').hide();
+            $('body').fadeIn(3000);
+
+            $('a').click(function(){
+                link = $(this).attr('href');
+                $('body').fadeOut(1000, function(){
+                    window.location.href = link;
+                });
+                return false;
+            });
+        });
+    </script>
+    <script src="sparkleHover.js"></script>
     <h1>
-       <br />About Us
+       <br /><br />About Us
     </h1>
-    <div>
-        <div style="text-align: center">
-        <p style="display: inline-block; text-align: left;">
-
-            
-            
-
-
-        
-        </pdiv style="display: inline-block; text-align: left;">
-    </div>
+    <div class="row">
+        <span class="profile">
+            <img src="https://imgur.com/iIKOCV1.jpg" width="300px" />
+        </span>
+        <span class="column">
+            <div class="name">Connor Wind</div>
+            <div class="personal">Major: International Relations</div>
+            <div class="personal">Minor: Computer Science & Chinese</div>
+            <div class="fact">Better knees than Mr. Siker</div>
+        </span>
+    </div><br/ ><br/ ><br/ >
+    <div class="row">
+        <span class="profile">
+            <img src="https://imgur.com/StbCDey.jpg" width="300px" />
+        </span>
+        <span class="column">
+            <div class="name">Hailey McKelvie</div>
+            <div class="personal">Major: Computer Science</div>
+            <div class="personal">Minor: Mathematics</div>
+            <div class="fact">Copies photos from roster off of phone</div>
+        </span>
+    </div><br/ ><br/ ><br/ >
+    <div class="row">
+        <span class="profile">
+            <img src="https://imgur.com/TLRSkOb.jpg" width="300px" />
+        </span>
+        <span class="column">
+            <div class="name">Niki Glenister</div>
+            <div class="personal">Major: Computer Science & Music</div>
+            <div class="fact">Learning to sword-fight</div>
+        </span>
+    </div><br/ ><br/ ><br/ >
+    <div class="row">
+        <span class="profile">
+            <img src="https://imgur.com/cwWh92P.jpg" width="300px" />
+        </span>
+        <span class="column">
+            <div class="name">Rhys Gilkenson</div>
+            <div class="personal">Major: Computer Science</div>
+            <div class="personal">Minor: Chinese</div>
+            <div class="fact">Has never eaten mayonaise</div>
+        </span>
+    </div><br/ ><br/ ><br/ >
+    <div class="row">
+        <span class="profile">
+            <img src="https://imgur.com/bF6cEkA.jpg" width="300px" />
+        </span>
+        <span class="column">
+            <div class="name">Vaughan Siker</div>
+            <div class="personal">Major: Computer Science & Philosophy</div>
+            <div class="fact">Better than Connor at things</div>
+        </span>
+    </div><br/ ><br/ ><br/ >
+    <script language="javascript">
+        $('img').sparkleHover({
+            colors: 'rgba(0,0,0,0)',
+            num_sprites: 20,
+            lifespan: 1000,
+            radius: 500,
+            shape: 'circle',
+            sprite_size: 40,
+            gravity: 'false',
+            image: 'https://imgur.com/JeZFjnX.png'
+        });
+    </script>
     <div class="heading">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
@@ -42,7 +154,7 @@
         <a href="contact.html">Other</a>
         <a href="contact.html">Stuff</a>
         <a href="about.html">About Us</a>
-    </div>
+    </div><br/ ><br/ ><br/ >
     <div class="footer">
         <p>
             Contact us: 
