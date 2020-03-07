@@ -17,6 +17,49 @@
             text-shadow: 2px 2px 4px rgb(1, 7, 44);
         }
         
+        table{
+
+            font-family: 'Mirza', cursive;
+            font-size: 16px;
+            color: rgb(255, 236, 185);
+            text-align: left;
+        }
+        select{
+            font-family: 'Mirza', cursive;
+            font-size: 16px;
+            color: rgb(255, 236, 185);
+            text-align: left;
+            background-color: #20242b;
+        }
+
+        p{
+
+            font-size: 20px;
+        }
+
+
+        input{
+
+            font-family: 'Mirza', cursive;
+            font-size: 16px;
+            color: rgb(255, 236, 185);
+            text-align: left;
+            background-color: #20242b;
+            outline-color: #20242b;
+            
+
+            
+            
+
+        }
+        th{
+            text-align: left;
+            font-size: 20px;
+            padding: 5px 5px;
+        }
+        table{
+            width: 100%;
+        }
         
     </style>
 </head>
@@ -45,12 +88,212 @@
         <div style="text-align: center">
         <p style="display: inline-block; text-align: left;">
             <br><br>
-                ADD AN ORDER FORM (COPY JADE)            
+                        
 
 
         
         </pdiv style="display: inline-block; text-align: left;">
     </div>
+
+<script>
+    function MenuItem(name, cost)
+    {
+        this.name = name;
+        this.cost=cost;
+    }
+    
+    menuItems = new Array(
+        new MenuItem("The Classic", 2.25),
+        new MenuItem("Double Truffle", 4),
+        new MenuItem("Salt 'n' Peppa", 2.50),
+        new MenuItem("Ragin Cajun", 3),
+        new MenuItem("Easy Cheesy", 4.35),
+        new MenuItem("Worcestershire", 2.55)
+    );
+    
+    function makeSelect(name, minRange, maxRange)
+    {
+        var t= "";
+        t = "<select name='" + name + "' size='1' onchange=tableChange(this.value,name)>";
+        for (j=minRange; j<=maxRange; j++)
+           t += "<option>" + j + "</option>";
+        t+= "</select>"; 
+        return t;
+    }
+    
+    function tableChange(val, x){
+        
+        var str = x;
+        var ar = str.split("n");
+        row = parseInt(ar[1])+1;
+       
+        /*gets the new cost*/
+        var itemcost = document.getElementById("table").rows[row].cells[2].innerHTML;
+        var itmar = itemcost.split(" ")
+        var itm = parseFloat(itmar[2]);
+       
+       /*gets the cost items*/
+        var f = document.getElementsByName("cost");
+        
+        f[(row-1)].value = itm*val;
+    
+    
+       
+        /*calc subtotal*/
+        var subtotal = 0;
+        
+        for(var i = 0; i< f.length; i++)
+        {
+           
+           
+        
+           itm = parseFloat(f[i].value);
+          subtotal = (subtotal + itm);
+        }
+        var tax = parseFloat((subtotal*.0625).toFixed(2))
+        document.getElementById("subtotal").value = subtotal;
+        document.getElementById("tax").value = tax;
+        document.getElementById("total").value = (subtotal + tax)
+        
+    }
+    
+    
+    function onSubmit(){
+      
+      if(document.getElementById("total").value == 0)
+      {
+        document.getElementById("error").innerHTML = "Please order something";
+        return;
+      }
+    
+      if(testphone(document.getElementById('p').value)==false)
+      {
+        return;
+      }
+    
+      var pd = document.getElementsByName("p_or_d");
+     
+      var dt = new Date();
+      var newDate;
+    
+      if(pd[0].checked == false)
+      {
+        if(document.getElementById("s").value =="" || document.getElementById("c").value  == "")
+        {
+          document.getElementById("error").innerHTML = "For delivery orders you must include a street and city.";
+          return;
+        }
+        else
+        {
+          newDate = new Date(dt.getTime() + 30*60000);
+         
+          document.getElementById("success").innerHTML = "Thanks for ordering!. Your order will arrive at " + newDate.toLocaleTimeString();
+          return;
+        }
+      }
+      newDate = new Date(dt.getTime() + 15*60000);
+         
+      document.getElementById("success").innerHTML = "Thanks for ordering!. Your order will arrive at " + newDate.toLocaleTimeString();
+      return;
+    
+    
+    
+    }
+    
+    function testphone(phone){
+    
+        var x;
+        
+        
+        
+        if (parseInt(phone) == NaN) {
+          x ="Valid phone numbers must only contain numbers. Try again";
+          document.getElementById("error").innerHTML =x ;
+          return false;
+        }
+        
+        if (parseInt(phone) <= 999999999 ||parseInt(phone) >= 10000000000 )  
+        {
+          x = "Phone number is not a valid length. Try Again."
+          document.getElementById("error").innerHTML =x ;
+          return false;
+        }
+      
+        
+        
+        x ="";
+        document.getElementById("error").innerHTML =x ;
+        return true;
+    
+      }
+    
+     
+    
+    
+    </script>
+    
+    
+    <form id="fries" onsubmit="return false">
+    <p id = "error" class="error"></p>
+    <p id = "success" class="success"></p>
+    <p>First Name:</p> <input type="text"  name='fname' id ='f' />
+    <p>Last Name*: </p> <input type="text"  name='lname' id='l' required />
+    <p>Street:</p> <input type="text"  name='street' id='s' />
+    <p>City: </p><input type="text"  name='city' id='c'/>
+    <p>Phone*:</p> <input type="number"  name='phone' id = 'p' required/>
+    
+    
+    <p> 
+        <br>
+        <input type="radio"  name="p_or_d" value = "pickup" checked="checked"/>Pickup  
+        <input type="radio"  name='p_or_d' value = 'delivery'/>
+        Delivery
+        <br> <br>
+    </p>
+
+
+    <table cellpadding="1" id="table">
+      <tr>
+        <th>Select Item</th>
+        <th>Item Name</th>
+        <th>Item Cost</th>
+        <th>Total Cost</th>
+      </tr>
+    <script language="javascript">
+    
+      var s = "";
+      for (i=0; i< menuItems.length; i++)
+      {
+          s += "<tr><td>";
+          s += makeSelect("quan" + i, 0, 10);
+          s += "</td><td>" + menuItems[i].name + "</td>";
+          s += "<td> $ " + menuItems[i].cost.toFixed(2) + "</td>";
+          s += "<td>$<input type='text' name='cost' value='0' readonly/></td></tr>";
+      }
+    
+     /* s += "<td>$<input type='text' name='cost'/></td></tr>";*/
+      document.writeln(s);
+    </script>
+    
+    
+    
+    
+    </table>
+    <p><br><br>Subtotal: 
+      $
+    </p><input type="text"  name='subtotal' id="subtotal" readonly />
+    <p>Mass tax 6.25%:
+     $ 
+    </p><input type="text"  name='tax' id="tax" readonly/>
+    <p>Total: $ 
+    </p><input type="text"  name='total' id="total" readonly />
+    <br>
+    <div style="text-align:center; width: 100%;">
+    <input  style="display: inline-block; padding: 10px 10px;"type="submit" value="Submit Order" onclick="onSubmit()"> 
+    </div>
+    </form>
+
+
     <div class="heading">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
