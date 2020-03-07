@@ -1,8 +1,9 @@
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative:400,700&display=swap" rel="stylesheet">
+   
     <title>
-
-        Tufts Historical Review Page
+        Boston Artisanal Fries
     </title>
 
     <!-- external stylesheet-->
@@ -10,11 +11,51 @@
 
     <!--interal stylesheet-->
     <style>
-       
+       .parallax {
+        /* The image used */
+        background-image: url("freis.jpeg");
+        opacity: 0.1;
+
+        /* Set a specific height */
+        height: 400px;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        margin: 0;
+       }
+
+       .paratext{
+        position:relative;
+        text-align: center;
+        top: 215px;
+        color:rgb(255, 238, 190);
+        text-shadow: 3px 2px 2px rgb(1, 7, 44);
+        font-size: 30px;
+
+       }
         h1 {
             color:rgb(255, 238, 190);
             text-align: center;
-            text-shadow: 2px 2px 4px #2F2821;
+            text-shadow: 5px 5px 7px rgb(1, 7, 44);
+            margin: 30px;
+	        padding: 10px;
+            border: 0;
+            font-size: 400%;
+            font-family: 'Cinzel Decorative', cursive;
+            font-weight: 700;
+        }
+
+        .wrap{
+            text-align: center;
+        }
+        .info{
+           display: inline-block;
+           padding: 10%;
+           font-size: 40px;
         }
         
         
@@ -38,20 +79,46 @@
             });
         });
     </script>
+
+<script language="javascript">
+    /*$('img').sparkleHover({
+        colors: 'rgba(0,0,0,0)',
+        num_sprites: 20,
+        lifespan: 1000,
+        radius: 500,
+        shape: 'circle',
+        sprite_size: 40,
+        gravity: 'false',
+        image: 'https://imgur.com/JeZFjnX.png'
+    });*/
+</script>
+
+
     <h1>
-       <br>Artisan Fries
+       <br><br>Artisan Fries
     </h1>
-    <div>
-        <div style="text-align: center">
-        <p style="display: inline-block; text-align: left;">
 
-            
-            
-
-
+    <div class= "wrap" >
         
-        </pdiv style="display: inline-block; text-align: left;">
+        <p class = "info">
+            We provide the Boston area with high quality artisan french fries.
+        <p>
+        
     </div>
+    <p class = "paratext">
+        Order online or at any of our locations  
+    <p>
+    <div class="parallax"></div>
+
+
+    <div class= "wrap" >
+        <p class = "info">
+            Order online or at any of our locations  
+        <p>
+    </div>
+
+    <div class="parallax" style="background-image: url('boston.jpg'); opacity: .4;" ></div>
+
     <div class="heading">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>

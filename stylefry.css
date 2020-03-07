@@ -1,5 +1,15 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Mirza&display=swap');
 html{
     height: 100%;
+}
+h1 {
+    color:rgb(255, 238, 190);
+    text-align: center;
+    text-shadow: 2px 2px 4px #2F2821;
+    z-index: 1;
+    font-size: 300%;
+    font-family: 'Mirza', cursive;
 }
 body{
 
@@ -10,7 +20,7 @@ body{
 
 }
 p{
-    font-family: 'Franklin Gothic Medium';
+    font-family: 'Mirza', cursive;
     font-size: 16px;
     color: rgb(255, 236, 185);
     text-align: left;
@@ -23,7 +33,9 @@ a{
     overflow: hidden;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
+    background-color: #20242b
     
 
 }
@@ -34,7 +46,7 @@ a{
     text-align: center;
     padding:14px 16px;
     font-size: 18px;
-    background-color: #20242b
+    
 }
 .heading a:hover {
     background-color: rgb(194, 191, 150);
