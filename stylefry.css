@@ -13,7 +13,8 @@ h1 {
 }
 body{
 
-    background-image: linear-gradient(45deg, #20242b 0%, #8895ac 100%);
+    /*background-image: linear-gradient(45deg, #20242b 0%, #8895ac 100%);*/
+    background-image: linear-gradient(45deg, #8895ac 0%, #FFF 100%);
     background-attachment:fixed;
     height:100%;
 
