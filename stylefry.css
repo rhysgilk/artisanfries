@@ -28,6 +28,7 @@ p{
 }
 a{
     color: rgb(255, 236, 185);
+    text-shadow: 2px 2px 4px #2F2821;
 }
 
 .heading{
@@ -36,11 +37,7 @@ a{
     top: 0;
     left: 0;
     width: 100%;
-    /*background-color: #8895ac;*/
-    background-image: linear-gradient(45deg, #FFF 100%, #8895ac 0%);
-    
-    
-
+    background-image: linear-gradient(45deg, #8895ac 0%, #c8c8cf 100%);
 }
 
 .heading a{
