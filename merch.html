@@ -16,7 +16,28 @@
             text-align: center;
             text-shadow: 2px 2px 4px rgb(1, 7, 44);
         }
-        
+        .column {
+            float: left;
+            width: 25%;
+        }
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .data {
+            height: 300px;
+            font-family: 'Mirza', cursive;
+            font-size: 26px;
+            color:rgb(255, 238, 190);
+            text-shadow: 2px 2px 4px rgb(1, 7, 44);
+        }
+        .sub {
+            text-align: center;
+            color:rgb(255, 238, 190);
+            font-size: 20px;
+            text-shadow: 2px 2px 4px rgb(1, 7, 44);
+        }
         
     </style>
 </head>
@@ -41,16 +62,48 @@
     <h1>
        <br>Merchandise
     </h1>
+    <div class="sub">For all merch, visit a nearby location to purchase!</div>
     <div>
         <div style="text-align: center">
-        <p style="display: inline-block; text-align: left;">
-            <br><br>
-            Add some pictures for like a t-shirt and some stickers
-            add a form if enough time, or say "buy merch at our locations"
-            
-
-
-        
+        <p class="row" style="text-align: left;">
+            <div class="column">
+                <div class="data">
+                    <br /><br />Artisan Fries T-Shirt<br />
+                    Starting from: $26.99
+                </div>
+                <div class="data">
+                    <br /><br />Thank God It's Fryday Shirt<br />
+                    Starting from: $31.95
+                </div>
+                <div class="data">
+                    <br /><br />I Speak French Fry T-Shirt<br />
+                    Starting from: $24.95
+                </div>
+            </div>
+            <div class="column">
+                <img src="artisan_fries.png" width="300px" /><br /><br />
+                <img src="fryday.png" width="300px" /><br /><br />
+                <img src="french_fry.png" width="300px" /><br /><br />
+            </div>
+            <div class="column">
+                <img src="ride_or_fry.png" width="300px" /><br /><br />
+                <img src="love_fries.png" width="300px" /><br /><br />
+                <img src="time_fries.png" width="300px" /><br /><br />
+            </div>
+            <div class="column">
+                <div class="data">
+                    <br /><br />Ride Or Fry Shirt<br />
+                    Starting from: $25.50
+                </div>
+                <div class="data">
+                    <br /><br />I Love Fries T-Shirt<br />
+                    Starting from: $26.95
+                </div>
+                <div class="data">
+                    <br /><br />Time Fries T-Shirt<br />
+                    Starting from: $29.95
+                </div>
+            </div>
         </pdiv style="display: inline-block; text-align: left;">
     </div>
     <div class="heading">
