@@ -17,48 +17,60 @@
             text-shadow: 2px 2px 4px rgb(1, 7, 44);
         }
         
-        table{
-
-            font-family: 'Mirza', cursive;
-            font-size: 16px;
-            color: rgb(255, 236, 185);
-            text-align: left;
-        }
         select{
             font-family: 'Mirza', cursive;
-            font-size: 16px;
+            font-size: 1em;
             color: rgb(255, 236, 185);
             text-align: left;
             background-color: #20242b;
         }
 
         p{
-
-            font-size: 20px;
+            font-size: 1.5em;
         }
 
 
         input{
 
             font-family: 'Mirza', cursive;
-            font-size: 16px;
+            font-size: 1.5em;
             color: rgb(255, 236, 185);
             text-align: left;
             background-color: #20242b;
             outline-color: #20242b;
-            
-
-            
-            
-
         }
-        th{
-            text-align: left;
-            font-size: 20px;
-            padding: 5px 5px;
-        }
+        
+        
         table{
+
+            font-family: 'Mirza', cursive;
+            color: rgb(255, 236, 185);
+            text-align: left;
             width: 100%;
+            max-width: 1200px;
+        }
+        
+        table img {
+          min-width: 3em;
+          max-width: 6em;
+          width: 100%;
+          height: auto;
+          padding: .5em;
+        }
+        
+        td {
+          font-size: 1.5em;
+          padding: 1em;
+        }
+        
+        td input {
+          font-size: 1em;
+        }
+        
+        th {
+            text-align: left;
+            font-size: 1.75em;
+            padding: 5px 5px;
         }
         
     </style>
@@ -111,6 +123,15 @@
         new MenuItem("Worcestershire", 2.55)
     );
     
+    menuPics = new Array(
+        "item_the_classic.jpg",
+        "item_double_truffle.jpg",
+        "item_salt_n_peppa.jpg",
+        "item_ragin_cajun.jpg",
+        "item_easy_cheesy.jpg",
+        "item_worcestershire.jpg"
+    );
+    
     function makeSelect(name, minRange, maxRange)
     {
         var t= "";
@@ -128,14 +149,14 @@
         row = parseInt(ar[1])+1;
        
         /*gets the new cost*/
-        var itemcost = document.getElementById("table").rows[row].cells[2].innerHTML;
+        var itemcost = document.getElementById("table").rows[row].cells[3].innerHTML;
         var itmar = itemcost.split(" ")
         var itm = parseFloat(itmar[2]);
        
        /*gets the cost items*/
         var f = document.getElementsByName("cost");
         
-        f[(row-1)].value = itm*val;
+        f[(row-1)].value = (itm*val).toFixed(2);
     
     
        
@@ -254,6 +275,7 @@
 
     <table cellpadding="1" id="table">
       <tr>
+        <th>&nbsp;</th>
         <th>Select Item</th>
         <th>Item Name</th>
         <th>Item Cost</th>
@@ -264,9 +286,11 @@
       var s = "";
       for (i=0; i< menuItems.length; i++)
       {
-          s += "<tr><td>";
+          s += "<tr><td>" + "<img src='" + menuPics[i] + "' />" + "</td>"
+          s += "<td>";
           s += makeSelect("quan" + i, 0, 10);
-          s += "</td><td>" + menuItems[i].name + "</td>";
+          s += "</td>"
+          s += "<td>" + menuItems[i].name + "</td>";
           s += "<td> $ " + menuItems[i].cost.toFixed(2) + "</td>";
           s += "<td>$<input type='text' name='cost' value='0' readonly/></td></tr>";
       }
