@@ -359,25 +359,38 @@
     
     <!-- Make header only fixed when would go off screen ------->
     <script type="text/javascript">
+    
         page_menu = document.getElementById("page_menu");
-        menu_locked_pos = 325;
+        menu_base_pos = 324;
+        menu_base_width = 1261;
+        
+        menu_curr_pos = menu_base_pos;
         is_fixed = false;
         
-        page_menu.style["position"] = "absolute";
-        page_menu.style["top"] = menu_locked_pos + "px";
+        checkWidth();
+        fixed_or_not();
         
-        window.onscroll = function() {fixed_or_not()}
+        window.onscroll = function() {fixed_or_not()};
+        window.addEventListener("resize", checkWidth);
         
         function fixed_or_not() {
-            if (window.pageYOffset >= menu_locked_pos) {
+            if (window.pageYOffset >= menu_curr_pos) {
                 page_menu.style["position"] = "fixed";
                 page_menu.style["top"] = "0px";
                 is_fixed = true;
             } else if (is_fixed) {
                 page_menu.style["position"] = "absolute";
-                page_menu.style["top"] = menu_locked_pos + "px";
+                page_menu.style["top"] = menu_curr_pos + "px";
                 is_fixed = false;
             }
+        }
+        
+        // Used to update y-pos of bar relative to bottom of header image
+        function checkWidth() {
+          var width = window.innerWidth;
+          menu_curr_pos = (width/menu_base_width) * menu_base_pos;
+          is_fixed = true;
+          fixed_or_not();
         }
     </script>
     <!------------------------------->
