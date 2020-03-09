@@ -57,9 +57,18 @@ a{
     position: fixed;
     left: 0;
     bottom: 0;
-     width: 100%;
-    text-align: center;
-} 
+    width: 100%;
+    background-color: #8895ac;
+    font-family: 'Mirza', cursive;
+    font-size: 1.5em;
+    color: #AB5341 ;
+    text-align: left;
+}
+
+.footer a {
+  color: #AB5341;
+  text-shadow: 2px 2px 4px #544739;
+}
 
 .large {
   color: #fff;
