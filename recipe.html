@@ -37,6 +37,11 @@
             });
         });
     </script>
+    
+    <!-- Header image -->
+    <img src="site_header_image.png" style="max-width:100%; height:auto;" />
+    <!-------------------------->
+    
     <h1>
        <br /><br />Recipes<br />
     </h1>
@@ -44,46 +49,7 @@
         <div style="text-align: center">
         <p style="display: inline-block; text-align: left;">
             <br><br>
-            <html>
-<head>
-    <title>
-
-        Services
-    </title>
-
-    <!-- external stylesheet-->
-    <link rel="stylesheet" href="stylefry.css">
-
-    <!--interal stylesheet-->
-    <style>
-       
-        h1 {
-            color:rgb(255, 238, 190);
-            text-align: center;
-            text-shadow: 2px 2px 4px rgb(1, 7, 44);
-        }
-        
-        
-    </style>
-</head>
-<body>
-    <script src="https://code.jquery.com/jquery-3.4.1.js" 
-    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" 
-    crossorigin="anonymous"></script>
-    <script language="javascript">
-        $(function(){
-            $('body').hide();
-            $('body').fadeIn(3000);
-
-            $('a').click(function(){
-                link = $(this).attr('href');
-                $('body').fadeOut(1000, function(){
-                    window.location.href = link;
-                });
-                return false;
-            });
-        });
-    </script>
+            
     <div>
         <div style="text-align: center">
         <p style="display: inline-block; text-align: left;">
@@ -378,7 +344,7 @@
         </pdiv style="display: inline-block; text-align: left;">
     </div>
     
-    <div class="heading">
+    <div class="heading" id="page_menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
@@ -387,31 +353,37 @@
         <a href="merch.html">Merchandise</a>
         <a href="about.html">About Us</a>
     </div>
-    <div class="footer">
-        <p>Contact us: <a href="mailto:fakeaddress@gmail.com">
-       Frymyfaceoff@fakeaddress.com</a>.</p>
-        </div>
-</body>
-</html>
-
-            
-
-
+    
+    <!-- Make header only fixed when would go off screen ------->
+    <script type="text/javascript">
+        page_menu = document.getElementById("page_menu");
+        menu_locked_pos = 325;
+        is_fixed = false;
         
-        </pdiv style="display: inline-block; text-align: left;">
-    </div>
-    <div class="heading">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-        <a href="order.html">Order Now</a>
-        <a href="recipe.html">Recipes</a>
-        <a href="merch.html">Merchandise</a>
-        <a href="about.html">About Us</a>
-    </div>
+        page_menu.style["position"] = "absolute";
+        page_menu.style["top"] = menu_locked_pos + "px";
+        
+        window.onscroll = function() {fixed_or_not()}
+        
+        function fixed_or_not() {
+            if (window.pageYOffset >= menu_locked_pos) {
+                page_menu.style["position"] = "fixed";
+                page_menu.style["top"] = "0px";
+                is_fixed = true;
+            } else if (is_fixed) {
+                page_menu.style["position"] = "absolute";
+                page_menu.style["top"] = menu_locked_pos + "px";
+                is_fixed = false;
+            }
+        }
+    </script>
+    <!------------------------------->
     <div class="footer">
         <p>Contact us: <a href="mailto:fakeaddress@gmail.com">
        Frymyfaceoff@fakeaddress.com</a>.</p>
         </div>
+        
 </body>
 </html>
+
+          

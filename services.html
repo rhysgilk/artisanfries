@@ -38,6 +38,11 @@
             });
         });
     </script>
+    
+    <!-- Header image -->
+    <img src="site_header_image.png" style="max-width:100%; height:auto;" />
+    <!-------------------------->
+    
     <h1>
        <br /><br />SERVICES<br />
     </h1>
@@ -87,7 +92,7 @@
         
         </pdiv style="display: inline-block; text-align: left;">
     </div>
-    <div class="heading">
+    <div class="heading" id="page_menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
@@ -96,6 +101,32 @@
         <a href="merch.html">Merchandise</a>
         <a href="about.html">About Us</a>
     </div>
+    
+    <!-- Make header only fixed when would go off screen ------->
+    <script type="text/javascript">
+        page_menu = document.getElementById("page_menu");
+        menu_locked_pos = 325;
+        is_fixed = false;
+        
+        page_menu.style["position"] = "absolute";
+        page_menu.style["top"] = menu_locked_pos + "px";
+        
+        window.onscroll = function() {fixed_or_not()}
+        
+        function fixed_or_not() {
+            if (window.pageYOffset >= menu_locked_pos) {
+                page_menu.style["position"] = "fixed";
+                page_menu.style["top"] = "0px";
+                is_fixed = true;
+            } else if (is_fixed) {
+                page_menu.style["position"] = "absolute";
+                page_menu.style["top"] = menu_locked_pos + "px";
+                is_fixed = false;
+            }
+        }
+    </script>
+    <!------------------------------->
+    
     <div class="footer">
         <p>Contact us: <a href="mailto:fakeaddress@gmail.com">
        Frymyfaceoff@fakeaddress.com</a>.</p>
