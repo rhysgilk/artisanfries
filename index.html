@@ -98,6 +98,10 @@
 </script>
 
 
+<!-- Header image -->
+<img src="header_image_no_name.png" style="max-width:100%; height:auto;" />
+<!-------------------------->
+
     <h1>
        <br><br>Artisan Fries
     </h1>
@@ -129,7 +133,7 @@
 
 
     <div class= "wrap" >
-        <p class = "info"> Contact us for catering opporutnities <p>   
+        <p class = "info"> Contact us for catering opportunities <p>   
     </div>
 
 
@@ -137,9 +141,7 @@
 
 
 
-
-
-    <div class="heading">
+    <div class="heading" id="page_menu">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
         <a href="contact.html">Contact</a>
@@ -148,6 +150,45 @@
         <a href="merch.html">Merchandise</a>
         <a href="about.html">About Us</a>
     </div>
+
+    <!-- Make header only fixed when would go off screen ------->
+    <script type="text/javascript">
+    
+        page_menu = document.getElementById("page_menu");
+        menu_base_pos = 228;
+        menu_base_width = 1261;
+        
+        menu_curr_pos = menu_base_pos;
+        is_fixed = false;
+        
+        checkWidth();
+        fixed_or_not();
+        
+        window.onscroll = function() {fixed_or_not()};
+        window.addEventListener("resize", checkWidth);
+        
+        function fixed_or_not() {
+            if (window.pageYOffset >= menu_curr_pos) {
+                page_menu.style["position"] = "fixed";
+                page_menu.style["top"] = "0px";
+                is_fixed = true;
+            } else if (is_fixed) {
+                page_menu.style["position"] = "absolute";
+                page_menu.style["top"] = menu_curr_pos + "px";
+                is_fixed = false;
+            }
+        }
+        
+        // Used to update y-pos of bar relative to bottom of header image
+        function checkWidth() {
+          var width = window.innerWidth;
+          menu_curr_pos = (width/menu_base_width) * menu_base_pos;
+          is_fixed = true;
+          fixed_or_not();
+        }
+    </script>
+    <!------------------------------->
+    
     <div class="footer">
         <p>Contact us: <a href="mailto:fakeaddress@gmail.com">
        Frymyfaceoff@fakeaddress.com</a>.</p>
