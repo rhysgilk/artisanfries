@@ -259,14 +259,14 @@
     <form id="fries" onsubmit="return false">
     <p id = "error" class="error"></p>
     <p id = "success" class="success"></p>
-    <p>First Name:</p> <input type="text"  name='fname' id ='f' /><br />
-    <p>Last Name*: </p> <input type="text"  name='lname' id='l' required /><br />
-    <p>Street:</p> <input type="text"  name='street' id='s' /><br />
-    <p>City: </p><input type="text"  name='city' id='c'/><br />
-    <p>Phone*:</p> <input type="number"  name='phone' id = 'p' required/>
+    <p>First Name:</p> <input type="text"  name='fname' id ='f' />
+    <p style="padding-top: 5px">Last Name*: </p> <input type="text"  name='lname' id='l' required />
+    <p style="padding-top: 5px">Street:</p> <input type="text"  name='street' id='s' />
+    <p style="padding-top: 5px">City: </p><input type="text"  name='city' id='c'/>
+    <p style="padding-top: 5px">Phone*:</p> <input type="number"  name='phone' id = 'p' required/>
     
     
-    <p> 
+    <p style="padding-top: 5px"> 
         <br>
         <input type="radio"  name="p_or_d" value = "pickup" checked="checked"/>Pickup  
         <input type="radio"  name='p_or_d' value = 'delivery'/>
@@ -307,12 +307,12 @@
     </table>
     <p><br><br>Subtotal: 
       $
-    </p><input type="text"  name='subtotal' id="subtotal" readonly /><br />
-    <p>Mass tax 6.25%:
+    </p><input type="text"  name='subtotal' id="subtotal" readonly />
+    <p style="padding-top: 5px">Mass tax 6.25%:
      $ 
-    </p><input type="text"  name='tax' id="tax" readonly/><br />
-    <p>Total: $ 
-    </p><input type="text"  name='total' id="total" readonly /><br />
+    </p><input type="text"  name='tax' id="tax" readonly/>
+    <p style="padding-top: 5px">Total: $ 
+    </p><input type="text"  name='total' id="total" readonly />
     <br>
     <div style="text-align:center; width: 100%;">
     <input  style="display: inline-block; padding: 10px 10px;"type="submit" value="Submit Order" onclick="onSubmit()"> 
