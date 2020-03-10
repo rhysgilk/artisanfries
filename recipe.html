@@ -12,29 +12,55 @@
     <!--interal stylesheet-->
     <style>
        
-        h1 {
-            color:rgb(255, 238, 190);
-            text-align: center;
-            text-shadow: 2px 2px 4px rgb(1, 7, 44);
-        }
-	 h2 {
-		color:rgb(255, 238, 190);
-		text-shadow: 2px 2px 4px rgb(1, 7, 44);
-	  }
-	 .row {
+    h1 {
+        color:rgb(255, 238, 190);
+        text-align: center;
+        text-shadow: 2px 2px 4px rgb(1, 7, 44);
+    }
+    h2 {
+        color:rgb(255, 238, 190);
+        text-shadow: 2px 2px 4px rgb(1, 7, 44);
+    }
+    .row {
+        width: 100%;
+        box-sizing: border-box;
+        display: inline-block;
+    }
+    .col {
+        width: 50%;
+        box-sizing: border-box;
+        display: inline-block;
+        float: right;
+        padding-top: 75px;
+        padding-left: 150px;
+        font-size: 1.25em;
+        text-align: left;
+    }
+    @media (max-width: 1100px)
+    {
+        .col {
+            display: block;
             width: 100%;
-            box-sizing: border-box;
-            display: inline-block;
+            text-align: center;
+            float: none;
+            padding-left: 0px;
         }
-	.col {
-            width: 50%;
-            box-sizing: border-box;
-            display: inline-block;
-            float: right;
-            padding-top: 75px;
-	    padding-left: 150px;
-            font-size: 1.25em;
+        .row {
+            display: block;
+            text-align: center;
         }
+        ol, ul, li{
+            display: block;
+            list-style-type: none;
+            margin-top: 0em;
+            margin-bottom: 0em;
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: 0px;
+            display: block;
+        }
+
+    }
            
     </style>
 </head>
@@ -61,47 +87,32 @@
     <img src="site_header_image.png" style="max-width:100%; height:auto;" />
     <!-------------------------->
     
-    <h1>
-       <br /><br />Recipes<br />
-    </h1>
-     <br>
-     <br>
+    <h1><br /><br />Recipes</h1>
             
     <div>
         <div style="text-align: center">
-        <p style="display: inline-block; text-align: center; font-size: 1.5em; width: 80%;">
-            <br><br>
-                Recreate our famous french fries recipes at home! We have 
-		<br>simplified our mystery ingredients and cooking techniques
-		<br>to short recipes that can be completed in 20/30 minutes,
-		<br>with just an hour of prep. See the modified versions our our
-		<br>creations below.
-      
-        </pdiv style="display: inline-block; text-align: left;">
-    </div>
-    <br><br>
+            <p style="text-align: center; font-size: 1.5em; width: 100%;"><br/ > 
+                <br>Recreate our famous french fries recipes at home! We have 
+        		<br>simplified our mystery ingredients and cooking techniques
+        		<br>to short recipes that can be completed in 20/30 minutes,
+        		<br>with just an hour of prep. See the modified versions our our
+        		<br>creations below.
+        </pdiv style="display: inline-block;">
+    </div><br/ ><br/ >
+    
 	<h1 align="center">
-            <u>Our Classic Artisan French Fries</u>
-        </h1>
-	<br>
-	<br>
+        <u>Our Classic Artisan French Fries</u>
+    </h1><br/ ><br/ >
+	
 	<p style="text-align: center; font-size: 1.25em;" align="center">
-                serves 4-6 people <br>
-                prep time: 20 minutes, 1 hour 20 minutes total
-                <br>
-                <br>
-                <br>
-       	</p>
-     <div class="row">
-            <img src="item_the_classic.jpg" width="300px" class="center">
-        <br>
-	<br>
-	<br>
-        <br>
+        Serves 4-6 people<br>
+        Prep time: 20 minutes, 1 hour 20 minutes total<br/ ><br/ ><br/ >
+    </p>
+    <div class="row">
+        <img src="item_the_classic.jpg" width="300px" class="center"><br/ ><br/ ><br/ ><br/ >
         <span class="recipe">
-            <div class="col" style ="display: inline-block; text-align: left;">
-		    <h2> ingredients: </h2>
-		    <br>
+            <div class="col">
+                <h2>Ingredients:</h2><br/ >
                 <ul>
                     <li>4 large potatoes </li>
                     <li>3/4 teaspoon sea salt</li>
@@ -109,43 +120,39 @@
                     <li>1 teaspoons paprika</li>
                 </ul>
             </div>
-            <div class="col" style ="display: inline-block; text-align: left;">
-		 <h2> directions: </h2>
-		    <br>
-                 <ol>
+            <div class="col">
+                <h2>Directions:</h2><br/ >
+                <ol>
                     <li>peel potatoes </li><br>
                     <li>cut the potatoes lengthwise into thin strips,
-                        about 1/3-inch wide.</li> <br>
+                        about 1/3-inch wide.</li><br>
                     <li>soak the potatoes in ice-cold water for 1 hour. </li><br>
                     <li>drain and pat completely dry.</li><br>
-                    <li>heat the oil in a deep-fryer or deep skillet to 325 F
-		    <br>and blanchthe potatoes by frying them in batches for
-	            <br>2 minutes. </li><br>
-	            <li>Drain the fries on fresh kitchen towels or paper towels.</li> <br>
-                    <li>increase the heat of the oil to 375 F then cook the
-	            <br>potatoes for the second time in batches for 1 1/2 
-		    <br>minutes.</li> <br>
-                    <li>drain the fries on baking sheets lined with paper
-                    <br>towels and portion them on servings plates.</li> <br>
-                    <li>sprinkle them with salt and paprika, serve
-                    <br>immediately.</li> <br>
+                    <li>heat the oil in a deep-fryer or deep skillet to 325 F<br/ >
+                        and blanchthe potatoes by frying them in batches for<br/ >
+                        2 minutes. </li><br>
+                    <li>Drain the fries on fresh kitchen towels or paper towels.</li> <br>
+                    <li>increase the heat of the oil to 375 F then cook the<br/ >
+                        potatoes for the second time in batches for 1 1/2<br/ >
+                        minutes.</li> <br>
+                    <li>drain the fries on baking sheets lined with paper<br/ >
+                        towels and portion them on servings plates.</li> <br>
+                    <li>sprinkle them with salt and paprika, serve<br/ >
+                        immediately.</li> <br>
                     <li>enjoy!!</li>
                 </ol>
             </div>
         </span>
-    </div><br/ ><br/ ><br/ >
-	<br><br>
-	<h1 align="center">
-            <u>Our Double Truffle Fries</u>
-        </h1>
-	<br>
-	<br>
-	<p style="text-align: center; font-size: 1.25em;" align="center">
-                serves 4-6 people <br>
-                prep time: 20 minutes, 1 hour 20 minutes total
-                <br>
-                <br>
-       	</p>
+    </div><br/ ><br/ ><br/ ><br/ ><br/ >
+    <h1 align="center">
+        <u>Our Double Truffle Fries</u>
+    </h1><br/ ><br/ >
+    
+    <p style="text-align: center; font-size: 1.25em;" align="center">
+        Serves 4-6 people<br>
+        Prep time: 20 minutes, 1 hour 20 minutes total<br/ ><br/ ><br/ >
+    </p>
+
      <div class="row">
         <span class="fryImg">
             <img src="item_double_truffle.jpg" width="300px" class="center">
@@ -155,7 +162,7 @@
 	<br>
         <br>
         <span class="recipe">
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> ingredients: </h2>
 		    <br>
                 <ul>
@@ -167,7 +174,7 @@
                     <li>2 tablespoons parsley (minced)</li>
                 </ul>
             </div>
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> directions: </h2>
                  <ol>
                     <li>peel potatoes </li>
@@ -204,17 +211,14 @@
     <br><br>
 
      <br><br>
-	<h1 align="center">
-            <u>Our Easy Cheesy French Fries</u>
-        </h1>
-	<br>
-	<br>
-	<p style="text-align: center; font-size: 1.25em;" align="center">
-                serves 4-6 people <br>
-                prep time: 20 minutes, 1 hour 20 minutes total
-                <br>
-                <br>
-       	</p>
+    <h1 align="center">
+        <u>Our Easy Cheesy French Fries</u>
+    </h1><br/ ><br/ >
+    
+    <p style="text-align: center; font-size: 1.25em;" align="center">
+        Serves 4-6 people<br>
+        Prep time: 20 minutes, 1 hour 20 minutes total<br/ ><br/ ><br/ >
+    </p>
      <div class="row">
         <span class="fryImg">
             <img src="item_easy_cheesy.jpg" width="300px" class="center">
@@ -223,7 +227,7 @@
 	<br>
         <br>
         <span class="recipe">
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> ingredients: </h2>
 		    <br>
                 <ul>
@@ -235,7 +239,7 @@
                     <li>2 teaspoons paprika</li>
                 </ul>
             </div>
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> directions: </h2>
 		    <br>
                  <ol>
@@ -274,17 +278,15 @@
     </div><br/ ><br/ ><br/ >
 
 	<br><br>
-	<h1 align="center">
-            <u>Our Salt n' Peppa French Fries</u>
-        </h1>
-	<br>
-	<br>
-	<p style="text-align: center; font-size: 1.25em;" align="center">
-                serves 4-6 people <br>
-                prep time: 20 minutes, 1 hour 20 minutes total
-                <br>
-                <br>
-       	</p>
+    <h1 align="center">
+        <u>Our Salt n' Peppa French Fries</u>
+    </h1><br/ ><br/ >
+    
+    <p style="text-align: center; font-size: 1.25em;" align="center">
+        Serves 4-6 people<br>
+        Prep time: 20 minutes, 1 hour 20 minutes total<br/ ><br/ ><br/ >
+    </p>
+	
 	<div class="row">
         <span class="fryImg">
             <img src="item_salt_n_peppa.jpg" width="300px" class="center">
@@ -295,7 +297,7 @@
 	<br>
         <br>
         <span class="recipe">
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> ingredients: </h2>
 		    <br>
                 <ul>
@@ -305,7 +307,7 @@
                     <li>3/4 teaspoon freshly ground black pepper</li>
                 </ul>
             </div>
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> directions: </h2>
 		    <br>
                  <ol>
@@ -341,24 +343,22 @@
     </div><br/ ><br/ ><br/ >
 
     <br>
-	<h1 align="center">
-            <u>Our Ragin' Cajun French Fries</u>
-        </h1>
-	<br>
-	<br>
-	<p style="text-align: center; font-size: 1.25em;" align="center">
-                serves 4-6 people <br>
-                prep time: 20 minutes, 1 hour 20 minutes total
-                <br>
-                <br>
-       	</p>
+    <h1 align="center">
+        <u>Our Ragin' Cajun French Fries</u>
+    </h1><br/ ><br/ >
+    
+    <p style="text-align: center; font-size: 1.25em;" align="center">
+        Serves 4-6 people<br>
+        Prep time: 20 minutes, 1 hour 20 minutes total<br/ ><br/ ><br/ >
+    </p>
+	
     <div class="row">
         <span class="fryImg">
             <img src="item_ragin_cajun.jpg" width="300px" class="center">
         </span>
 	<br><br><br> 
         <span class="recipe">
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> ingredients: </h2>
 		    <br>
                 <ul>
@@ -372,7 +372,7 @@
                     <li>3/4 teaspoon freshly ground black pepper</li>
                 </ul>
             </div>
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> directions: </h2>
 		    <br>
                  <ol>
@@ -410,17 +410,15 @@
 
       
       <br><br>
-	<h1 align="center">
-            <u>Our Worchestershire French Fries</u>
-        </h1>
-	<br>
-	<br>
-	<p style="text-align: center; font-size: 1.25em;" align="center">
-                serves 4-6 people <br>
-                prep time: 30 minutes, 1 hour 30 minutes total
-                <br>
-                <br>
-       	</p>
+    <h1 align="center">
+        <u>Our Worchestershire French Fries</u>
+    </h1><br/ ><br/ >
+    
+    <p style="text-align: center; font-size: 1.25em;" align="center">
+        Serves 4-6 people<br>
+        Prep time: 30 minutes, 1 hour 30 minutes total<br/ ><br/ ><br/ >
+    </p>
+
       <div class="row">
 	<br><br>
         <span class="fryImg">
@@ -429,7 +427,7 @@
         <br><br>
 	<br><br>
         <span class="recipe">
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> ingredients: </h2>
 		    <br>
                 <ul>
@@ -447,7 +445,7 @@
                     <li>ground black pepper to taste</li>
                 </ul>
             </div>
-            <div class="col" style ="display: inline-block; text-align: left;">
+            <div class="col">
 		    <h2> directions: </h2>
 		    <br>
                  <ol>
@@ -542,5 +540,3 @@
     <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
 </body>
 </html>
-
-          
